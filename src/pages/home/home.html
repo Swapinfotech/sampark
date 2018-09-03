@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div *ngFor = "let notification of notifications;">
+      <marquee style="color:blue">{{notification.notification_title}}</marquee>
+  </div>
+    <div style="height:35%;width:100%;" *ngFor = "let banner of banners; let i = index;">
+        <ion-slides pager="true"  >
+          <ion-slide>
+              <img [src]="banner.banner_image" height="auto" width="110%" imageViewer />
+          </ion-slide>
+       </ion-slides>
+      </div>
+
+      <ion-row (click)="searchPage()">
+        <ion-col col-2 style="padding-top:20px;padding-left:30px">
+            <ion-icon name="ios-search"  style="font-size:32px;"></ion-icon>
+        </ion-col>
+        <ion-col col-8>
+            <p style="padding-left:5px;color:grey"> <b> Search</b>   <br> To Search for a Members </p>
+        </ion-col>
+        <ion-col col-2 style="padding-top:28px;padding-left:30px">
+            <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <div class="news" >
+        <h5> News & Events </h5>
+      </div>
+      <div *ngFor = "let ne of news; let i = index;" style="padding-top:13px">
+        <ion-row (click)="presentNewsModal(ne)" >
+          <ion-col col-3 >
+              <img [src]="ne.featured_image"imageViewer />
+          </ion-col>
+          <ion-col col-9 >
+            <h6> {{ne.title}}</h6>
+            <p style="display:inline; color:grey"> {{ne.publish_date_and_time}}<br>{{ne.short_description}} </p>
+          </ion-col>
+        </ion-row>
+        <hr>
+      </div>
+</ion-content>

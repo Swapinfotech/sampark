@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Birthday & Reminders</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <h6 style="color:grey;" text-center> Birthday & Anniversary in this Month</h6>
+  <div *ngFor="let b_date of dates;">
+
+    <!-- <div *ngFor="let data of dataList"> -->
+      <!-- <div *ngFor="let da of list[b_data]">
+        {{da.id}} -->
+        <div padding style="background-color: #eee;border:1px solid grey"> {{b_date}} </div>
+        <div style="border-bottom: 1px solid grey;" *ngFor="let data of list[b_date]" >
+          <ion-row (click)="details(data)">
+            <ion-col col-3 style="padding-top:3px" >
+              
+              <img src={{data.display_profile_image}} style="width:100% ; height: 70px;" imageViewer />
+            </ion-col>
+            <ion-col col-9>
+              <h6> {{data.display_name}}</h6>
+              <p> {{data.event_type}} </p>
+            </ion-col>
+          </ion-row>
+        </div>
+      
+  </div>
+  <!-- <div padding style="background-color: #eee;border:1px solid grey"> 07/06/2018 </div>
+    <div style="border-bottom: 1px solid grey;">
+      <ion-row (click)="details()">
+        <ion-col col-3 style="padding-top:13px">
+         <img src="assets/imgs/backImage5.jpg"  imageViewer />
+        </ion-col>
+        <ion-col col-9 >
+          <h6> Vikas Jain</h6>
+          <p> Birthday </p>
+        </ion-col>
+      </ion-row>
+    </div>
+</ion-content> -->

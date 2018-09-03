@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar  color="primary" >
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Feedback</ion-title>
+    </ion-navbar>
+</ion-header>
+        
+<ion-content padding-top >
+    <ion-list padding class="listRegister">
+        <ion-item>
+            <ion-label stacked class="registerLabel">Name <span class="req">*</span></ion-label>
+            <ion-input [(ngModel)]="subject" type="text" name="subject"   class="inputRegister" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked class="registerLabel">Feedback <span class="req">*</span></ion-label>
+            <ion-textarea [(ngModel)]="remarks" type="text"  rows="6" name="remarks"  class="inputRegister" ></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <div class="registerSubmit">
+      <button ion-button full (click)="feedbackSubmit()" round>Submit</button>
+    </div>
+    <div class="registerSubmit">
+      <button ion-button  full (click)="cancelSubmit()" round>Cancel</button>
+    </div>
+</ion-content>
+    
+      

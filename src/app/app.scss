@@ -1,0 +1,122 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+ion-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        // font-size: 2.2rem;
+      }
+      .back-button.show-back-button {
+        display: inline-block;
+        z-index: 49;
+    }
+    .button-md {
+      
+       text-transform: none; 
+     
+    }
+    //   .imageMenu {
+    //  height: 31vw; 
+    //  width: 32vw; 
+    //  border: 2px solid #fff;
+    //  border-radius: 50%;
+    //  box-shadow: 0 0 5px gray;
+    //  display: inline-block;
+    //  margin-left: auto;
+    //  margin-right: auto;
+    //  margin-top:5%;
+    // } 
+    .image1 {
+      height: 30vw; 
+      width: 32vw; 
+     border: 2px solid #fff;
+     border-radius: 50%;
+     box-shadow: 0 0 5px gray;
+     display: inline-block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top:5%;
+    } 
+  
+    .custom-avatar1 {
+      height: 29vw;
+      width: 31vw;
+     
+      border-radius: 60%;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      // text-align: center;
+     // border: 1px solid grey;
+    }
+     
+  .list-ios > .item-block:first-child {
+    border-top: 0px ;
+  }
+  ion-select {
+   
+    overflow: hidden;
+    max-width: 95%;
+}
+.item-block {
+  min-height: 5.4rem;
+  padding-left: 0px;
+}
+.item-label-stacked .select-ios, .item-label-floating .select-ios {
+  padding-left: 5%;
+}
+.item-inner, ion-item {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+ 
+}
+.toolbar-ios-primary .toolbar-title-ios, .toolbar-ios-primary .bar-button-clear-ios, .toolbar-ios-primary .bar-button-default-ios {
+  color: #fff;
+  font-size: 2.1rem;
+}
+.popover-ios .popover-content {
+
+  width: 85%;
+  min-width: 60%;
+  min-height: 0;
+  max-height: 90%;
+  color: #000;
+  background: #fff;
+}
+.item-cover {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 2%;
+  background: transparent;
+  cursor: pointer;
+}
+.button-ios {
+  border-radius: 4px;
+  height: 2.8em;
+  margin: 0;
+  padding: 0;
+}
+.toolbar-ios-primary .toolbar-title-ios, .toolbar-ios-primary .bar-button-clear-ios, .toolbar-ios-primary .bar-button-default-ios {
+  color: #fff;
+  font-size: 1.6rem;
+}

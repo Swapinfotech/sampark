@@ -1,0 +1,17 @@
+page-searchlist{
+    .searchImage{
+        border-radius: 60%;
+        height:65%;
+        width:100%;
+        margin-top:25%;
+    }
+    .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    p.block {
+        width: 300px;
+    }
+}

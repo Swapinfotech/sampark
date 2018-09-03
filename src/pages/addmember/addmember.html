@@ -1,0 +1,141 @@
+<ion-header>
+    <ion-navbar  color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Update Member Profile</ion-title>
+      <ion-buttons end>
+        <button clear (click)="cancel()" ion-button icon-only>
+        <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content >
+<ion-list class="listRegister" padding >
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">First Name</ion-label>
+        <ion-input [(ngModel)]="first_name" type="text" name="first_name" placeholder="First Name"  class="inputRegister" ></ion-input>
+    </div>
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">Last Name</ion-label>
+        <ion-input [(ngModel)]="last_name" type="text" name="last_name" placeholder="Last Name"  class="inputRegister" ></ion-input>
+    </div>
+
+    <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">User Relation</ion-label>
+        <ion-select [(ngModel)]="user_relation"  class="inputRegister" name="user_relation">
+            <ion-option value="1">father</ion-option>
+            <ion-option value="2">Mother</ion-option>
+            <ion-option value="3">brother</ion-option>
+            <ion-option value="5">Sister</ion-option>
+            <ion-option value="6">Wife</ion-option>
+            <ion-option value="7">Son</ion-option>
+            <ion-option value="8">Daughter</ion-option>
+            <ion-option value="9">Brother in Law</ion-option>
+            <ion-option value="10">Brother in Law's Daughter</ion-option>
+            <ion-option value="11">Brother in Law's Son</ion-option>
+            <ion-option value="12">Brother in Law's Wife</ion-option>
+            <ion-option value="13">Brother's son</ion-option>
+            <ion-option value="14">Brother's Wife</ion-option>
+            <ion-option value="15">Daughter in Law</ion-option>
+            <ion-option value="16">Father in Law</ion-option>
+            <ion-option value="17">Grand Daughter</ion-option>
+            <ion-option value="18">Grand Daughter in Law</ion-option>
+            <ion-option value="19">Grand Father</ion-option>
+            <ion-option value="20">Grand Mother</ion-option>
+            <ion-option value="21">Grand Son</ion-option>
+            <ion-option value="22">Grand Son's Wife</ion-option>
+            <ion-option value="23">Other</ion-option>
+
+        </ion-select>
+    </div>
+    <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Gender</ion-label>
+        <ion-select [(ngModel)]="gender"  class="inputRegister">
+            <ion-option value="FEMALE">Female</ion-option>
+            <ion-option value="MALE">Male</ion-option>
+        </ion-select>
+    </div>
+
+    <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Merital Status</ion-label>
+        <ion-select [(ngModel)]="merital_status"  class="inputRegister" name="merital_status">
+            <ion-option value="DIVORCED">Divorced</ion-option>
+            <ion-option value="MARRIED">Married</ion-option>
+            <ion-option value="STUDENT">Student</ion-option>
+            <ion-option value="UNMARRIED">Unmarried</ion-option>
+
+        </ion-select>
+    </div>
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">Father's Name</ion-label>
+        <ion-input [(ngModel)]="father_name" type="text" name="father_name" placeholder="Father's Name"  class="inputRegister" ></ion-input>
+    </div>
+
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">Mother's Name</ion-label>
+        <ion-input [(ngModel)]="mother_name" type="text" name="mother_name" placeholder="Mother's Name"  class="inputRegister" ></ion-input>
+    </div>
+
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">DOB</ion-label>
+        <ion-datetime [(ngModel)]="date_of_birth"  name="date_of_birth" placeholder="01/01/2018"  class="inputRegister" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY"></ion-datetime>
+    </div>
+
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">DOA</ion-label>
+        <ion-datetime [(ngModel)]="date_of_anniversary"  name="date_of_anniversary" placeholder="01/01/2018"  displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY"class="inputRegister" ></ion-datetime>
+    </div>
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">Email</ion-label>
+        <ion-input [(ngModel)]="user_email" type="text" name="user_email" placeholder="Email"  class="inputRegister" ></ion-input>
+    </div>
+    
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">Address</ion-label>
+        <ion-textarea [(ngModel)]="permanent_address" type="text" name="permanent_address" placeholder="Address" rows="4" class="inputRegister" ></ion-textarea>
+    </div>
+
+    <!-- <div class="regAll">
+        <ion-label stacked class="registerLabel">Landline No.</ion-label>
+        <ion-input [(ngModel)]="personal_landline_no" type="number" name="personal_landline_no" placeholder="Landline No."  class="inputRegister" ></ion-input>
+    </div>
+
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">Personal No.</ion-label>
+        <ion-input [(ngModel)]="personal_contact_no" type="number" name="personal_contact_no" placeholder="Personal No"  class="inputRegister" ></ion-input>
+    </div> -->
+
+    <div class="regAll">
+        <ion-label stacked class="registerLabel">City</ion-label>
+        <ion-input [(ngModel)]="permanent_city" type="text" name="permanent_city" placeholder="City"  class="inputRegister" ></ion-input>
+    </div>
+    <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">State</ion-label>
+        <ion-select [(ngModel)]="permanent_state" interface="popover" class="inputRegister" >
+            <ion-option value="1">M.P.</ion-option>
+            <ion-option value="2">U.P.</ion-option>
+            <ion-option value="3">Punjab</ion-option>
+            <ion-option value="4">Other</ion-option>
+        </ion-select>
+    </div>
+    <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Country</ion-label>
+        <ion-select [(ngModel)]="permanent_country" interface="popover" class="inputRegister">
+            <ion-option value="1">Nepal</ion-option>
+            <ion-option value="2">Bhutan</ion-option>
+            <ion-option value="3">Shree Lanka</ion-option>
+            <ion-option value="4">Other</ion-option>
+        </ion-select>
+    </div>
+    <div class="regAll" style="border-bottom: 1px solid grey">
+        <ion-label stacked class="registerLabel">Pincode</ion-label>
+        <ion-input [(ngModel)]="permanent_pincode" type="text" name="permanent_pincode" placeholder="Pincode"  class="inputRegister" ></ion-input>
+    </div>
+    <div class="registerSubmit">
+        <button ion-button (click)="submit()" round full>Submit</button>
+    </div>
+    </ion-list>
+    </ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-input [(ngModel)]="searchKey" type="text" name="searchKey" placeholder="Search Profile" class="searchInput"></ion-input>
+  </div>
+  <div style="padding-top:10px;">
+    <button ion-button full (click)="allSearch()" round>Submit</button>
+  </div>
+  <div style="margin-top:2%">
+    <img src="assets/imgs/search.png" width="100%"  />
+  </div>
+</ion-content>

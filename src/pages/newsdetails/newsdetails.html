@@ -1,0 +1,22 @@
+<ion-header>
+        <ion-navbar color="primary">
+         
+          <ion-title>News Details</ion-title>
+          <ion-buttons end padding-right>
+                <button (click)="cancel()" ion-button icon-only>
+               <ion-icon name="close"></ion-icon>
+             </button>
+          </ion-buttons>
+        </ion-navbar>
+      </ion-header>
+      
+    <ion-content >
+        <div>
+            <img [src]="news.featured_image" height="200px" width="100%" imageViewer />
+        </div>
+        <div text-center>
+            <h5>{{news.title}}</h5>
+            <p>{{news.publish_date_and_time}} <br> {{news.short_description}} </p>
+        </div>
+    </ion-content>
+      

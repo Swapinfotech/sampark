@@ -1,0 +1,350 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Update Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div text-center>
+    <div class="image">
+      <img [src]="profile_image" width="50%" height="50%" class="custom-avatar" imageViewer>
+    </div>
+    <div (click)="presentActionSheet()">
+      <ion-icon name="ios-camera-outline" class="profileIcon"></ion-icon>
+      <p style="color:grey">Add Your Profile Photo</p>
+    </div>
+  </div>
+
+
+  <div padding>
+    <ion-segment [(ngModel)]="details">
+      <ion-segment-button value="personal">
+        Personal
+      </ion-segment-button>
+      <ion-segment-button value="business">
+        Business
+      </ion-segment-button>
+      <ion-segment-button value="family">
+        Family
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="details">
+    <ion-list class="listRegister" padding *ngSwitchCase="'personal'">
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">First Name</ion-label>
+        <ion-input [(ngModel)]="first_name" type="text" name="first_name" placeholder="First Name" class="inputRegister"></ion-input>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Last Name</ion-label>
+        <ion-input [(ngModel)]="last_name" type="text" name="last_name" placeholder="Last Name" class="inputRegister"></ion-input>
+      </div>
+
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Gender</ion-label>
+        <ion-select [(ngModel)]="gender"  name="gender" class="inputRegister">
+          <ion-option value="FEMALE">Female</ion-option>
+          <ion-option value="MALE">Male</ion-option>
+        </ion-select>
+      </div>
+
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Merital Status</ion-label>
+        <ion-select [(ngModel)]="marital_status"  name="marital_status" class="inputRegister">
+          <ion-option value="DIVORCED">Divorced</ion-option>
+          <ion-option value="MARRIED">Married</ion-option>
+          <ion-option value="STUDENT">Student</ion-option>
+          <ion-option value="UNMARRIED">Unmarried</ion-option>
+
+        </ion-select>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Father's Name</ion-label>
+        <ion-input [(ngModel)]="father_name" type="text" name="father_name" placeholder="Father's Name" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Mother's Name</ion-label>
+        <ion-input [(ngModel)]="mother_name" type="text" name="mother_name" placeholder="Mother's Name" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">DOB</ion-label>
+        <ion-datetime [(ngModel)]="date_of_birth" name="date_of_birth" placeholder="01/01/2000" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY"class="inputRegister"></ion-datetime>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">DOA</ion-label>
+        <ion-datetime [(ngModel)]="date_of_anniversary"  name="date_of_anniversary" placeholder="01/01/2000" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" class="inputRegister"></ion-datetime>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Email</ion-label>
+        <ion-input [(ngModel)]="user_email" type="text" name="user_email" placeholder="Email" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Address</ion-label>
+        <ion-textarea [(ngModel)]="permanent_address" type="text" name="permanent_address" placeholder="Address" rows="4" class="inputRegister"></ion-textarea>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">City</ion-label>
+        <ion-input [(ngModel)]="permanent_city" type="text" name="permanent_city" placeholder="City" class="inputRegister"></ion-input>
+      </div>
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">State</ion-label>
+        <ion-select [(ngModel)]="permanent_state" class="inputRegister" name="permanent_state">
+          <ion-option *ngFor="let state of state_list" value="{{state.id}}">{{state.state_name}}</ion-option>
+        </ion-select>
+      </div>
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Country</ion-label>
+        <ion-select [(ngModel)]="permanent_country"  class="inputRegister" name="permanent_country">
+          <ion-option *ngFor="let country of country_list" value="{{country.id}}">{{country.name}}</ion-option>
+        </ion-select>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Pincode</ion-label>
+        <ion-input [(ngModel)]="permanent_pincode" type="text" name="permanent_pincode" placeholder="Pincode" class="inputRegister"></ion-input>
+      </div>
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Caste</ion-label>
+        <ion-select [(ngModel)]="profile_Cast"  class="inputRegister" name="profile_Cast">
+          <ion-option value="SHWETAMBER-MURTI POOJAK">Shwetamber-Murti Poojak</ion-option>
+          <ion-option value="SHWETAMBER-KHARTAR GACHCH">Shwetamber-Khartar Gachch</ion-option>
+          <ion-option value="SHWETAMBER-STHANAKWASI">Shwetamber-Sthanakwasi</ion-option>
+          <ion-option value="SHWETAMBER-TAPA GACHCH">Shwetamber-Tapa Gachch</ion-option>
+          <ion-option value="SHWETAMBER-TERAPANTH">Shwetamber-Terapanth</ion-option>
+        </ion-select>
+      </div>
+
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Blood Group</ion-label>
+        <ion-select [(ngModel)]="profile_blood_group"  name="profile_blood_group" class="inputRegister">
+          <ion-option value="A+">A+</ion-option>
+          <ion-option value="A-">A-</ion-option>
+          <ion-option value="B+">B+</ion-option>
+          <ion-option value="B-">B-</ion-option>
+          <ion-option value="O+">O+</ion-option>
+          <ion-option value="O-">O-</ion-option>
+          <ion-option value="AB+">AB+</ion-option>
+          <ion-option value="AB-">AB-</ion-option>
+        </ion-select>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Education</ion-label>
+        <ion-input [(ngModel)]="education" type="text" name="education" placeholder="Education" class="inputRegister"></ion-input>
+      </div>
+      <div class="regAll" style="border-bottom: 1px solid grey;">
+        <ion-label stacked class="registerLabel">Hobbies</ion-label>
+        <ion-input [(ngModel)]="hobbies" type="text" name="hobbies" placeholder="Hobbies" class="inputRegister"></ion-input>
+      </div>
+      <ion-card>
+        <ion-row (click)="presentPhoneModal()">
+          <ion-col col-2 text-center>
+            <ion-icon name="add" item-left style="font-size:32px;"></ion-icon>
+          </ion-col>
+          <ion-col col-10>
+            <h5 style="margin-top: 0.7rem;">Phone No.</h5>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card *ngFor="let phone of phone_list">
+        <ion-row text-center>
+          <ion-col col-4 padding>
+            {{phone.contact_type}}
+          </ion-col>
+          <ion-col col-5 padding-top>
+            {{phone.contact_number}}
+          </ion-col>
+          <ion-col col-1 (click)="editPhone(phone)">
+            <ion-icon name="md-create" style="font-size:32px;"></ion-icon>
+          </ion-col>
+
+          <ion-col col-2 (click)="removePhone(phone)">
+            <ion-icon name="close" style="font-size:32px; padding-left: 5px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+    </ion-list>
+
+    <ion-list padding *ngSwitchCase="'business'">
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Name</ion-label>
+        <ion-input [(ngModel)]="firm_name" type="text" name="firm_name" placeholder="Firm Name" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Industry Category</ion-label>
+        <!-- <ion-input [(ngModel)]="firm_type" type="text" name="firm_type" placeholder="Industry Category" class="inputRegister"></ion-input> -->
+        <ion-select [(ngModel)]="firm_type"  name="firm_type" class="inputRegister">
+          <ion-option value="AGENCY">Agency</ion-option>
+          <ion-option value="APPAREL GARMENT & TEXTILE" text-wrap>Apparel Garment & Textile</ion-option>
+          <ion-option value="AUDIT % TEXATION">Audit % Texation</ion-option>
+          <ion-option value="AUTOMOBILE PARTS & SPARES">Automobile Parts & Spares</ion-option>
+          <ion-option value="BAGS,BELTS AND WALLETS">Bags,Belts and Wallets</ion-option>
+          <ion-option value="BANKING SERVICE">Banking Service</ion-option>
+          <ion-option value="CABLES & WIRES">Cables & Wires</ion-option>
+          <ion-option value="CALL CENTER & BPO SERVICES">Call Center & BPO services</ion-option>
+          <ion-option value="CHEMICALS DYES % SOLVENTS">Chemicals Dyes % Solvents</ion-option>
+          <ion-option value="COMPUTER HARDWARE & NETWORKING">Computer Hardware & Networking</ion-option>
+          <ion-option value="CONSULTANT">Consultant</ion-option>
+          <ion-option value="COSMETIC & PERSONAL CARE">Cosmetic & Personal Care</ion-option>
+          <ion-option value="DIAMOND GEMS & JEWELRY">Diamond Gems & Jewelry</ion-option>
+          <ion-option value="ELECTRONICS & ELECTRICAL">Electronics & Electrical</ion-option>
+          <ion-option value="EYE WEAR & OPTICIAN">Eye Wear & Optician</ion-option>
+          <ion-option value="FASHION ACCESSORIES & GEAR">Fashion Accessories & Gear</ion-option>
+          <ion-option value="FINANCIAL & LEGAL SERVICE">Financial & Legal Service</ion-option>
+          <ion-option value="GIFT ITEMS">Gift Items</ion-option>
+          <ion-option value="GOLD & SILVER">Gold & Silver</ion-option>
+          <ion-option value="HENDICRAFT & DECORATIVES">Handicraft & Decoratives</ion-option>
+          <ion-option value="HEALTHCARE,MEDICAL & PHARMACEUTICAL">Healthcare,Medical & pharmaceutical</ion-option>
+          <ion-option value="HERBAL & AYURVEDIC PRODUCT">Herbal & Ayurvedic Product</ion-option>
+          <ion-option value="HOME TEXTILE & FURNISHING">Home Textile & Furnishing</ion-option>
+          <ion-option value="HOUSE WIFE">House Wife </ion-option>
+          <ion-option value="IMPORT & EXPORT">Import & Export</ion-option>
+          <ion-option value="INDUSTRIAL PLANT & MACHINE">Industrial Plant & Machine</ion-option>
+          <ion-option value="INDUSTRIAL SUPPLIES">Industrial supplies</ion-option>
+          <ion-option value="INSURANCE & MUTUAL FUNDS">Insurance & Mutual Funds</ion-option>
+          <ion-option value="JOBS & SERVICE">Jobs & Services</ion-option>
+          <ion-option value="KIRANA & GENERAL MERCHANT">Kirana & General Merchant</ion-option>
+          <ion-option value="METAL ALLOYS & MINERALS">Metal Alloys & Minerals</ion-option>
+          <ion-option value="PACKING MACHINE & GOODS">Packing Machine & Goods</ion-option>
+          <ion-option value="PAPER & PAPER PRODUCTS">Paper & Paper Products</ion-option>
+          <ion-option value="PHYWOOD & FIREWOOD">Phywood & Firewood </ion-option>
+          <ion-option value="PRINTING & PHOTOGRAFY">Printing & Photografy</ion-option>
+          <ion-option value="RAIL SHIPPING & AVIATION">Rail Shipping & Aviation</ion-option>
+          <ion-option value="SALES & MARKETING">Sales & Marketing</ion-option>
+          <ion-option value="SOAP">Soap</ion-option>
+          <ion-option value="STEEL">Steel</ion-option>
+          <ion-option value="STOCK MARKET & BROKER">Stock Market & Broker</ion-option>
+          <ion-option value="TEA & COFFEE">Tea & Coffee</ion-option>
+          <ion-option value="TELECOMMUNICATION">Telecommunication</ion-option>
+          <ion-option value="TOURS & TRAVELS">Tours & Travels</ion-option>
+          <ion-option value=" TRANSPORT & LOGISTICS"> Transport & Logistics</ion-option>
+        </ion-select>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Contact No.1</ion-label>
+        <ion-input [(ngModel)]="firm_contact1" type="text" name="firm_contact1" placeholder="Firm Contact No.1" class="inputRegister"></ion-input>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Contact No.2</ion-label>
+        <ion-input [(ngModel)]="firm_contact2" type="text" name="firm_contact2" placeholder="Firm Contact No.2" class="inputRegister"></ion-input>
+      </div>
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Contact No.3</ion-label>
+        <ion-input [(ngModel)]="firm_contact3" type="text" name="firm_contact3" placeholder="Firm Contact No.3" class="inputRegister"></ion-input>
+      </div>
+
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">Firm Country</ion-label>
+        <ion-select [(ngModel)]="firm_country" class="inputRegister" name="firm_country">
+
+          <ion-option *ngFor="let country of country_list" value="{{country.id}}">{{country.name}}</ion-option>
+        </ion-select>
+      </div>
+
+      <div ion-item class="regAll">
+        <ion-label stacked class="registerLabel">State</ion-label>
+        <ion-select [(ngModel)]="firm_state"  class="inputRegister" name="firm_state">
+          <ion-option *ngFor="let state of state_list" value="{{state.id}}">{{state.state_name}}</ion-option>
+        </ion-select>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm City</ion-label>
+        <ion-input [(ngModel)]="firm_city" type="text" name="firm_city" placeholder="Firm City" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Address</ion-label>
+        <ion-input [(ngModel)]="firm_address" type="text" name="firm_address" placeholder="Firm Address" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Pincode</ion-label>
+        <ion-input [(ngModel)]="firm_pincode" type="text" name="firm_pincode" placeholder="Firm Pincode" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll">
+        <ion-label stacked class="registerLabel">Firm Email</ion-label>
+        <ion-input [(ngModel)]="firm_email_id" type="text" name="firm_email_id" placeholder="Firm Email" class="inputRegister"></ion-input>
+      </div>
+
+      <div class="regAll" style="border-bottom: 1px solid grey;">
+        <ion-label stacked class="registerLabel">Firm Website</ion-label>
+        <ion-input [(ngModel)]="firm_website" type="text" name="firm_website" placeholder="Firm Website" class="inputRegister"></ion-input>
+      </div>
+
+      <ion-card text-center>
+        <p>Firm Logo</p>
+        <ion-buttons end>
+          <button clear (click)="cancel()" ion-button icon-only>
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-buttons>
+        <div class="image">
+          <img [src]="firm_logo" width="50%" height="50%" class="custom-avatar" imageViewer>
+        </div>
+        <div text-center (click)="presentActionSheet1()">
+          <ion-icon name="ios-camera-outline" class="logoIcon"></ion-icon>
+        </div>
+      </ion-card>
+
+      <ion-card text-center>
+        <p>QR Code</p>
+        <ion-buttons end>
+          <button clear (click)="cancel1()" ion-button icon-only>
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-buttons>
+        <div class="image">
+          <img [src]="qr_code_image" width="50%" height="50%" class="custom-avatar" imageViewer>
+        </div>
+        <div text-center (click)="presentActionSheet2()">
+          <ion-icon name="ios-camera-outline" class="logoIcon"></ion-icon>
+        </div>
+      </ion-card>
+    </ion-list>
+    <ion-list class="listRegister" padding *ngSwitchCase="'family'">
+      <ion-card (click)="presentMemberModal()">
+        <ion-row>
+          <ion-col col-2 text-center>
+            <ion-icon name="add" item-left style="font-size:32px;"></ion-icon>
+          </ion-col>
+          <ion-col col-10>
+            <h5 style="margin-top: 0.7rem;">Member</h5>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card *ngFor="let member of member_list">
+        <ion-row text-center>
+          <ion-col col-9 padding text-left>
+            {{member.first_name}}
+          </ion-col>
+          <!-- <ion-col col-5 padding-top>
+            {{member.Last_name}}
+          </ion-col> -->
+          <ion-col col-1 (click)="editMember(member)">
+            <ion-icon name="md-create" style="font-size:32px;"></ion-icon>
+          </ion-col>
+
+          <ion-col col-2 (click)="removeMember(member)">
+            <ion-icon name="close" style="font-size:32px; padding-left: 5px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </div>
+  <div class="registerSubmit">
+    <button ion-button full (click)="validateLogin()" round>Update</button>
+  </div>
+</ion-content>

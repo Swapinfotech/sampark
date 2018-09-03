@@ -1,0 +1,31 @@
+{
+  "name": "sampark",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/add_user",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/add_user",
+      "path": "/authenticate",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/authenticate",
+      "path": "/dashboard",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/dashboard",
+      "path": "/search",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/search",
+      "path": "/user_feedback",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/user_feedback",
+      "path": "/update_user",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/update_user",
+      "path": "/stateslist",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/stateslist",
+      "path": "/countrieslist",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/countrieslist",
+      "path": "/sms_authenticate",
+      "proxyUrl": "http://sampark.darshantraavels.com/wp-json/api/v1/sms_authenticate"
+
+    }
+  ]
+}

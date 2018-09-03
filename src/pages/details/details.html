@@ -1,0 +1,259 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content>
+  <div>
+    <div>
+      <img [src]="searchProfile.profile_image" height="200px" width="100%" imageViewer />
+    </div>
+    <div padding>
+      <ion-segment [(ngModel)]="details">
+        <ion-segment-button value="personal">
+          Personal
+        </ion-segment-button>
+        <ion-segment-button value="family">
+          Family
+        </ion-segment-button>
+        <ion-segment-button value="business">
+          Business
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="details">
+      <ion-list padding *ngSwitchCase="'personal'" text-wrap>
+        <ion-item>
+          <p>Name : {{searchProfile.first_name}} {{searchProfile.last_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Gender : {{searchProfile.gender}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Marital Status : {{searchProfile.marital_status}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Father Name : {{searchProfile.father_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Mother Name : {{searchProfile.mother_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Birth Date : {{searchProfile.date_of_birth}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Anniversary Date : {{searchProfile.date_of_anniversary}}</p>
+        </ion-item>
+        <ion-item>
+          <p>User Email : {{searchProfile.user_email}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Address :{{searchProfile.permanent_address}}</p>
+        </ion-item>
+        <ion-item>
+          <p>city : {{searchProfile.permanent_city}}</p>
+        </ion-item>
+        <ion-item>
+          <p>State : {{searchProfile.state_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Country : {{searchProfile.country_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Pincode : {{searchProfile.permanent_pincode}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Blood Group :{{searchProfile.profile_Cast}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Education :{{searchProfile.education}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Hobbies : {{searchProfile.hobbies}}</p>
+        </ion-item>
+        <ion-item *ngFor = "let cont of searchProfile.contact_no">
+          <p>Contact No. : {{cont.contact_number}}</p>
+        </ion-item>
+        <div text-center>
+          <p> QR Code </p>
+          <div text-center>
+            <div class="image">
+              <img [src]="searchProfile.qr_code_image"  width="50%" height="50%" class="custom-avatar" imageViewer>
+            </div>
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-list padding *ngSwitchCase="'family'">
+        <div *ngFor="let member of searchProfile.members" text-wrap>
+          <div padding>
+            <h4>
+               {{member.first_name}}
+            </h4>
+            <h5> relation: {{member.user_relation}}</h5>
+
+            <ion-item>
+              <p>Gender : {{member.gender}}</p>
+
+            </ion-item>
+            <ion-item>
+              <p>Marital Status:{{member.marital_status}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Father Name : {{member.father_name}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Mother Name :{{member.mother_name}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Birth Date :{{member.date_of_birth}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Anniversary Date : {{member.date_of_anniversary}}</p>
+            </ion-item>
+            <ion-item>
+              <p>User Email : {{member.user_email}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Address :{{member.permanent_address}}</p>
+            </ion-item>
+            <ion-item>
+              <p>city : {{member.permanent_city}}</p>
+            </ion-item>
+            <ion-item>
+              <p>State: {{member.state_name}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Country :{{member.country_name}}</p>
+            </ion-item>
+            <ion-item>
+              <p>Pincode :{{member.permanent_pincode}}</p>
+            </ion-item>
+            <!-- <ion-item>
+              <p>Blood Group :B+</p>
+            </ion-item> -->
+            <!-- <ion-item>
+              <p>Education:B.E</p>
+            </ion-item> -->
+            <!-- <ion-item>
+              <p>Hobbies :software Devlopment</p>
+            </ion-item> -->
+            <ion-item>
+              <p>Contact No. :{{member.personal_contact_no}}</p>
+            </ion-item>
+          </div>
+        </div>
+        <!-- <ion-card>
+          <div padding>
+            <h4>
+              Shri Seema Jain
+            </h4>
+            <h6> relation: Mother</h6>
+
+            <ion-item>
+              <p>Gender : Female</p>
+
+            </ion-item>
+            <ion-item>
+              <p>Marital Status:married</p>
+            </ion-item>
+            <ion-item>
+              <p>Father Name : prakash Jain</p>
+            </ion-item>
+            <ion-item>
+              <p>Mother Name :babita Jain</p>
+            </ion-item>
+            <ion-item>
+              <p>Birth Date :15/06/1972</p>
+            </ion-item>
+            <ion-item>
+              <p>Anniversary Date : 01/05/2014</p>
+            </ion-item>
+            <ion-item>
+              <p>User Email : cn@mailinator.com</p>
+            </ion-item>
+            <ion-item>
+              <p>Address :----------</p>
+            </ion-item>
+            <ion-item>
+              <p>city : indore</p>
+            </ion-item>
+            <ion-item>
+              <p>State: M.P.</p>
+            </ion-item>
+            <ion-item>
+              <p>Country :India</p>
+            </ion-item>
+            <ion-item>
+              <p>Pincode :452001</p>
+            </ion-item>
+            <ion-item>
+              <p>Blood Group :B+</p>
+            </ion-item>
+            <ion-item>
+              <p>Education:B.E</p>
+            </ion-item>
+            <ion-item>
+              <p>Hobbies :software Devlopment</p>
+            </ion-item>
+            <ion-item>
+              <p>Contact No. :9425726003</p>
+            </ion-item>
+          </div>
+        </ion-card> -->
+      </ion-list>
+
+      <ion-list padding *ngSwitchCase="'business'" text-wrap>
+        <div text-center>
+          <p> Firm Logo </p>
+          <div text-center>
+            <div class="image">
+              <img [src]="searchProfile.firm_logo"  width="50%" height="50%" class="custom-avatar" imageViewer/>
+            </div>
+          </div>
+        </div>
+        <ion-item>
+          <p>Firm Name : {{searchProfile.firm_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Industry Category : {{searchProfile.firm_type}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Contact No.1 : {{searchProfile.firm_contact1}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Contact No.2 : {{searchProfile.firm_contact2}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Contact No.3 : {{searchProfile.firm_contact3}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Country : {{searchProfile.firm_country_name}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm State :{{searchProfile.firm_state_name}}.</p>
+        </ion-item>
+        <ion-item>
+          <p>City : {{searchProfile.firm_city}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Address : {{searchProfile.firm_address}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Pincode : {{searchProfile.firm_pincode}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Email : {{searchProfile.firm_email_id}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Firm Website :{{searchProfile.firm_website}}</p>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

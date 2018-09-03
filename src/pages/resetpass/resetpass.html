@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Reset Password</ion-title>
+    </ion-navbar>
+     
+</ion-header>
+  
+<ion-content class="forgotContent">
+
+    <ion-list class="listRegister" padding>
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Email</ion-label>
+            <ion-input [(ngModel)]="email" type="text" name="email" placeholder="Email"  class="inputRegister" ></ion-input>
+        </div>
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Password</ion-label>
+            <ion-input [(ngModel)]="pwd" type="text" name="pwd" placeholder="password"  class="inputRegister" ></ion-input>
+        </div>
+    </ion-list>
+    <div class="registerSubmit">
+        <button ion-button (click)="resetPass()" full>SUBMIT</button>
+    </div>     
+
+</ion-content>
+  

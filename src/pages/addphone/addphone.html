@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+         Phone Number
+        </ion-title>
+        <ion-buttons end>
+                <button clear (click)="cancel()" ion-button icon-only>
+                <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-buttons>
+    </ion-navbar>
+    </ion-header>
+    
+<ion-content>
+        <ion-list class="listRegister" padding >
+            <div class="regAll">
+                <ion-label stacked class="registerLabel">Phone Number</ion-label>
+                <ion-input [(ngModel)]="contact_number" type="number" name="contact_number" placeholder="Phone Number"  class="inputRegister" ></ion-input>
+            </div>
+
+            <div ion-item class="regAll" style="border-bottom:1px solid grey;">
+                <ion-label stacked class="registerLabel">Contact Type</ion-label>
+                <ion-select [(ngModel)]="contact_type"  class="inputRegister">
+                    <ion-option value="Mobile">Mobile</ion-option>
+                    <ion-option value="PRIMARY">Primary</ion-option>
+                    <ion-option value="Work">Work</ion-option>
+                    <ion-option value="Home">Home</ion-option>
+                    <ion-option value="Work Fax">Work Fax</ion-option>
+                    <ion-option value="Home Fax">Home Fax</ion-option>
+                    <ion-option value="Other">Other</ion-option>
+                </ion-select>
+            </div>
+            <div class="registerSubmit">
+                    <button ion-button (click)="submit()" round full>Submit</button>
+                </div>
+        </ion-list>
+</ion-content>

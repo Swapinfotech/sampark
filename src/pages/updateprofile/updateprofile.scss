@@ -1,0 +1,96 @@
+page-updateprofile {
+   
+  //  .image {
+  //   height: 30vw; 
+  //   width: 30vw; 
+  //  border: 2px solid #fff;
+  //  border-radius: 50%;
+  //  box-shadow: 0 0 5px gray;
+  //  display: inline-block;
+  //  margin-left: auto;
+  //  margin-right: auto;
+  //  margin-top:5%;
+  // } 
+  .profileIcon{
+    font-size: 3.2em;
+  } 
+  .logoIcon{
+    font-size: 2.5em;
+  }
+  .inputRegister{
+      // padding-top:0px !important;
+    color:black;
+    font-size: 1.2rem;
+    width:100%;
+  }
+  .item-inner, ion-item {
+    // border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+   
+    
+  }
+  .list-ios > .item-block:first-child {
+    border-top: 0px ;
+}
+  .registerLabel{
+   
+    padding-left: 5%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black !important;
+    
+    
+  } 
+  .text-input-ios {
+    margin: 0; 
+    padding: 11px 8px 11px 0;
+    width: calc(100% - 8px);
+}
+  .listRegister{
+    padding-right: 3%;
+    margin-top:1%;
+   
+
+  }
+  .registerSubmit{
+    padding: 5%;
+
+  }
+  .image {
+    height: 30vw; 
+    width: 32vw; 
+   border: 2px solid #fff;
+   border-radius: 50%;
+   box-shadow: 0 0 5px gray;
+   display: inline-block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top:5%;
+  } 
+
+  .custom-avatar {
+    height: 29vw;
+    width: 31vw;
+   
+    border-radius: 60%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    // text-align: center;
+   // border: 1px solid grey;
+  }
+ .regAll{
+   border-left:1px solid grey;
+   border-right:1px solid grey;
+   border-top:1px solid grey;
+ }
+ button[icon-only] {
+  padding-right: 73px !important;
+  min-width: 2.9em;
+}
+ion-buttons {
+  margin: -14px 1.2rem -33px;
+}     
+  }
+  

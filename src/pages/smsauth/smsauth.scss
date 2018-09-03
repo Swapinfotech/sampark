@@ -1,0 +1,65 @@
+page-smsauth{
+    
+    background-color: #edf0fd;
+
+     p {
+        margin: 5px 0px 3px;
+        overflow: inherit;
+        font-size: 1.4rem;
+        line-height: normal;
+        text-overflow: inherit;
+        color: red;
+        padding-left: 6%;
+    }
+
+    .button-md-primary {
+        color: #fff;
+        background-color: #013765;
+        height: 56px;
+        font-size: 1.8rem;
+    }
+
+    .toolbar-title-md {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fff;
+        margin-left: 0px;
+    }
+
+    .item-inner, ion-item {
+        border-bottom-color: transparent !important;
+        box-shadow: none !important;
+       
+      }
+      
+    ion-input,ion-icon{
+        border-bottom: 1px solid;
+    }
+    ion-img {
+        display: inline-block;
+        min-width: 20px;
+        min-height: 20px;
+        background: rgba(255, 255, 255, 0.64);
+        contain: strict;
+        height: 150px;
+        width: 215px;
+      }
+      ion-icon {
+        border-bottom: none;
+    } 
+    
+    .list-ios > .item-block:first-child {
+        border-top: 0px ;
+    }
+    .item-ios [item-left], .item-ios [item-start] {
+        margin: 3px 0px 5px 0px;
+    }
+    .item-ios {
+     font-size: 1.4rem;
+    }
+    
+}
+.draftToast{
+    text-align: center;
+}

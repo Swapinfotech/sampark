@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search List</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <div >
+      <ion-row *ngFor = "let item of list" style="border-bottom: 1px solid grey;height:6em" (click)="searchProfile(item)"> 
+        <ion-col col-2>
+          <img [src]="item.profile_image" class="searchImage" imageViewer />
+        </ion-col>
+        <ion-col col-10>
+          <h6>
+            {{item.first_name}}
+          </h6>
+          <p style="color:grey;" class='ellipsis'>
+            {{item.permanent_address}}
+          </p>
+        </ion-col>
+      </ion-row>
+    </div>
+</ion-content>

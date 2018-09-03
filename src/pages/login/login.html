@@ -1,0 +1,54 @@
+
+
+<ion-content >
+    <div style="text-align:center">
+        <ion-img  src="assets/imgs/Logo1.png" alt=Bakersville  height="210px"
+        width="31vw"></ion-img> 
+    </div>
+
+   <div padding > 
+        <form [formGroup]="authForm" >
+            <ion-list padding>
+                    <ion-item >
+                        <!-- <ion-label floating>Username</ion-label> -->
+                        <ion-icon name="md-contact" style="font-size:32px;border-bottom: 1px solid;margin-top: 3px;padding-bottom: 7px;" item-left></ion-icon>
+                        <ion-input formControlName="user_name" type="text" value="" style="padding-left:5%;" placeholder="Username/Phone number" [(ngModel)]="user_name"></ion-input>
+                        <!-- <button ion-button clear item-end style="height:32px;">
+                            <ion-icon name="ios-contact-outline" style="font-size:32px;"></ion-icon>
+                        </button> -->
+                    </ion-item>
+                    
+                    <p *ngIf="authForm.controls.user_name.hasError('required') && authForm.controls.user_name.touched">*Username is required!</p>
+                    <p *ngIf="authForm.controls.user_name.hasError('pattern') && authForm.controls.user_name.touched">Please! enter a valid user name </p>
+                    <ion-item style="border-bottom: 1px solid black" >
+                        <!-- <ion-label floating>Password</ion-label> -->
+                        <ion-icon name="eye" item-left style="font-size:32px;border-bottom: 1px solid;padding-bottom: 7px;"></ion-icon>
+                        <ion-input formControlName="user_pass"  [type]="passwordType" clearOnEdit="false" style="padding-left:5%;" placeholder="Password" [(ngModel)]="user_pass"></ion-input>
+                        <!-- <button ion-button clear item-end (click)='hideShowPassword()' style="height:32px;margin-top: 25px">
+                            <ion-icon name="eye" style="font-size:32px;"></ion-icon>
+                        </button> -->
+                    </ion-item>
+                    <p *ngIf="authForm.controls.user_pass.hasError('required') && authForm.controls.user_pass.touched">*Password is required!</p>
+            
+                
+                    
+                <div style="padding:5%">
+                    <button ion-button color="primary" full round (click)="validateLogin()"  >Login</button>
+                    <br>
+                    <button ion-button color="primary" full round  (click)="registerPage()" >Register</button> 
+                    
+                    <p text-center>
+                    <button ion-button  clear (click)="forgotPassword()" >Forgot Password?</button>
+                    <button ion-button  clear (click)="smsAuth()" >Mobile Authentication</button>
+                    </p>
+                    
+    
+                </div> 
+                
+                
+            </ion-list>   
+        </form>
+    </div>
+   
+</ion-content>
+  

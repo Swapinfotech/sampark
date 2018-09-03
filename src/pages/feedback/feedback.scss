@@ -1,0 +1,48 @@
+
+
+    page-feedback {
+        .inputRegister{
+          border:1px solid black;
+          // border-radius:10px;
+          // -moz-border-radius:10px;
+          // -webkit-border-radius:10px;
+          padding-left:5% !important;
+          color:black;
+        }
+        .item-inner, ion-item {
+          border-bottom-color: transparent !important;
+          box-shadow: none !important;
+          background-color: transparent !important;
+        }
+        .registerLabel{
+          // border:1px solid grey;
+          padding-left: 2%;
+          font-size: 1.6rem;
+          color: black !important;
+          padding-bottom: 3%;
+          
+        } 
+        .listRegister{
+          padding-right: 3%;
+          
+      
+        }
+        .registerSubmit{
+          margin: 5%;
+      
+        }
+        .registerContent{
+          // background-image: url("../assets/imgs/demo6.jpg");
+          background-color: #e0e0e0;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+      
+        }
+        
+        .req{
+          color:red;
+        } 
+         
+      }
+      

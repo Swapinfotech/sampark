@@ -1,0 +1,58 @@
+
+  
+<ion-content >
+      
+    <div text-center>
+        <div class="image" >
+            <img [src]="imageSource"  width="50%" height="50%" class="custom-avatar" imageViewer/>
+        </div>
+        <div>
+            <ion-icon name="ios-camera-outline"  class="profileIcon" (click)="presentActionSheet()"></ion-icon>
+            <p style="color:grey">Add Your Profile Photo</p>
+        </div>
+    </div>
+    
+    <ion-list class="listRegister" style="padding-top: 16px;padding-left: 16px;padding-right:16px;">
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">First Name</ion-label>
+            <ion-input [(ngModel)]="first_name" type="text" name="first_name" placeholder="First Name"  class="inputRegister" autocorrect="on" spellcheck="true"></ion-input>
+        </div>
+
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Last Name</ion-label>
+            <ion-input [(ngModel)]="last_name" type="text" name="last_name" placeholder="Last Name"  class="inputRegister" ></ion-input>
+        </div>
+
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Father Name</ion-label>
+            <ion-input [(ngModel)]="father_name" type="text" name="father_name" placeholder="Father Name"  class="inputRegister" ></ion-input>
+        </div>
+
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Mother Name</ion-label>
+            <ion-input [(ngModel)]="mother_name" type="text" name="mother_name" placeholder="Mother Name"  class="inputRegister" ></ion-input>
+        </div>
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Email</ion-label>
+            <ion-input [(ngModel)]="user_email" type="text" name="user_email" placeholder="Email"   class="inputRegister" ></ion-input>
+        </div>
+
+        <div class="regAll">
+            <ion-label stacked class="registerLabel">Password</ion-label>
+            <ion-input [(ngModel)]="password" type="password" name="password" placeholder="Password"   class="inputRegister"  ></ion-input>
+        </div>
+
+        <div style="border: 1px solid grey;">
+            <ion-label stacked class="registerLabel">Mobile No.</ion-label>
+            <ion-input [(ngModel)]="contact_no" type="number" name="contact_no" placeholder="Mobile Number (Multiple and OTP Verified)"  class="inputRegister"  ></ion-input>
+        </div>
+    </ion-list>
+        <div class="registerSubmit">
+            <button ion-button (click)="submitRegister()" round full>Submit</button><br>
+            <button ion-button (click)="cancelRegister()" round full>Reset Form</button><br>
+            <button ion-button  (click)="backToLogin()" round full>Back to Login</button>
+        </div>
+        
+
+</ion-content>
+  
